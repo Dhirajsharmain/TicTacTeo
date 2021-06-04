@@ -11,6 +11,7 @@ public class TicTacToeGame {
         createBoard();
         chooseLetter();
         System.out.println(userLatter);
+        showBoard();
     }
 
     /**
@@ -20,6 +21,13 @@ public class TicTacToeGame {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please Choose One Letter X OR O That You Want TO Go With : ");
         userLatter = scanner.next().charAt(0);
+        if (userLatter == 'o') {
+            System.out.println("You have chosen letter O that's way computer go with letter X");
+        } else if (userLatter == 'x') {
+            System.out.println("You chosen letter X that's way computer go with letter O");
+        } else {
+            System.out.println("Please enter correct input");
+        }
     }
 
     /**
@@ -28,6 +36,19 @@ public class TicTacToeGame {
     public static void createBoard() {
         for (int i = 1; i < board.length; i++) {
             board[i] = '-';
+        }
+    }
+
+    /**
+     * @see : Method For Showing Board.
+     */
+    public static void showBoard() {
+        System.out.println("Updated Board : ");
+        for (int i = 1; i < board.length; i++) {
+            System.out.print(board[i] + " ");
+            if (i == 3 || i == 6) {
+                System.out.println();
+            }
         }
     }
 }
