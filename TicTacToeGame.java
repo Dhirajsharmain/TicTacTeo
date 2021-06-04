@@ -11,6 +11,7 @@ public class TicTacToeGame {
         createBoard();
         chooseLetter();
         System.out.println(userLatter);
+        showBoard();
     }
 
     /**
@@ -35,6 +36,19 @@ public class TicTacToeGame {
     public static void createBoard() {
         for (int i = 1; i < board.length; i++) {
             board[i] = '-';
+        }
+    }
+
+    /**
+     * @see : Method For Showing Board.
+     */
+    public static void showBoard() {
+        System.out.println("Updated Board : ");
+        for (int i = 1; i < board.length; i++) {
+            System.out.print(board[i] + " ");
+            if (i == 3 || i == 6) {
+                System.out.println();
+            }
         }
     }
 }
