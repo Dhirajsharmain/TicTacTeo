@@ -14,7 +14,7 @@ public class TicTacToeGame {
     }
 
     /**
-     * @see : Method For Choose One Letter X or O By User
+     * @see : Method For Choose One Letter X or O By User.
      */
     private static void chooseLetter() {
         Scanner scanner = new Scanner(System.in);
