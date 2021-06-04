@@ -20,6 +20,13 @@ public class TicTacToeGame {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please Choose One Letter X OR O That You Want TO Go With : ");
         userLatter = scanner.next().charAt(0);
+        if (userLatter == 'o') {
+            System.out.println("You have chosen letter O that's way computer go with letter X");
+        } else if (userLatter == 'x') {
+            System.out.println("You chosen letter X that's way computer go with letter O");
+        } else {
+            System.out.println("Please enter correct input");
+        }
     }
 
     /**
