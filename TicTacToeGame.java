@@ -5,13 +5,13 @@ public class TicTacToeGame {
 
     public static void main(String[] args) {
 
-        board();
+        createBoard();
     }
 
     /**
      * @see : Method For Creating Board with Empty Space
      */
-    public static void board() {
+    public static void createBoard() {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
                 board[i][j] = '-';
