@@ -13,9 +13,9 @@ public class TicTacToeGame {
      */
     public static void createBoard() {
         for (int i = 1; i < board.length; i++) {
-                board[i] = '-';
-            }
+            board[i] = '-';
         }
     }
+}
 
 }
