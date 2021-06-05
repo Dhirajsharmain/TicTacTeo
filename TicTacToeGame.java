@@ -68,6 +68,9 @@ public class TicTacToeGame {
         return moveIndex;
     }
 
+    /**
+     * @see : method for checking the free space before making the desired move.
+     */
     private static void checkFreeSpace(int moveIndex){
         if (board[moveIndex] == '-') {
             board[moveIndex] = userLatter;
@@ -78,6 +81,8 @@ public class TicTacToeGame {
         }
         displayBoard();
     }
+
+
 }
 
 
