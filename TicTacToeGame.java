@@ -55,6 +55,15 @@ public class TicTacToeGame {
         }
         System.out.println();
     }
+
+    /**
+     * @see : method for  user to make a move to a desired location in the board.
+     */
+    private int moveUser() {
+        System.out.print("Enter the index 1 to 9 that you want to move : ");
+        int moveIndex = scanner.nextInt();
+        return moveIndex;
+    }
 }
 
 
