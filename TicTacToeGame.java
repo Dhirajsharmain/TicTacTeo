@@ -15,6 +15,8 @@ public class TicTacToeGame {
         chooseLetter();
         System.out.println(userLatter);
         displayBoard();
+        moveUser();
+        checkFreeSpace(moveIndex);
     }
 
     /**
@@ -60,10 +62,21 @@ public class TicTacToeGame {
     /**
      * @see : method for  user to make a move to a desired location in the board.
      */
-    private int moveUser() {
+    private static int moveUser() {
         System.out.print("Enter the index 1 to 9 that you want to move : ");
         moveIndex = scanner.nextInt();
         return moveIndex;
+    }
+
+    private static void checkFreeSpace(int moveIndex){
+        if (board[moveIndex] == '-') {
+            board[moveIndex] = userLatter;
+        } else if (board[moveIndex] == computerLatter) {
+            System.out.println("Space is occupied");
+        } else {
+            System.out.println("Enter correct index");
+        }
+        displayBoard();
     }
 }
 
