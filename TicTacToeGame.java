@@ -6,6 +6,7 @@ public class TicTacToeGame {
     public static char board[] = new char[10];
     public static char userLatter;
     public static char computerLatter;
+    public static int moveIndex;
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -61,7 +62,7 @@ public class TicTacToeGame {
      */
     private int moveUser() {
         System.out.print("Enter the index 1 to 9 that you want to move : ");
-        int moveIndex = scanner.nextInt();
+        moveIndex = scanner.nextInt();
         return moveIndex;
     }
 }
