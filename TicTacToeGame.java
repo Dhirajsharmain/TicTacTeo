@@ -5,26 +5,29 @@ import java.util.Scanner;
 public class TicTacToeGame {
     public static char board[] = new char[10];
     public static char userLatter;
+    public static char computerLatter;
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
         createBoard();
         chooseLetter();
         System.out.println(userLatter);
-        showBoard();
+        displayBoard();
     }
 
     /**
      * @see : Method For Choose One Letter X or O By User.
      */
-    private static void chooseLetter() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please Choose One Letter X OR O That You Want TO Go With : ");
+    public static void chooseLetter() {
+        System.out.print("Please Choose One Letter x OR o That You Want TO Go With : ");
         userLatter = scanner.next().charAt(0);
         if (userLatter == 'o') {
-            System.out.println("You have chosen letter O that's way computer go with letter X");
+            System.out.println("You have chosen letter o that's way computer go with letter x");
+            computerLatter = 'x';
         } else if (userLatter == 'x') {
-            System.out.println("You chosen letter X that's way computer go with letter O");
+            System.out.println("You chosen letter x that's way computer go with letter o");
+            computerLatter = 'o';
         } else {
             System.out.println("Please enter correct input");
         }
@@ -42,7 +45,7 @@ public class TicTacToeGame {
     /**
      * @see : Method For Showing Board.
      */
-    public static void showBoard() {
+    public static void displayBoard() {
         System.out.println("Updated Board : ");
         for (int i = 1; i < board.length; i++) {
             System.out.print(board[i] + " ");
@@ -50,6 +53,7 @@ public class TicTacToeGame {
                 System.out.println();
             }
         }
+        System.out.println();
     }
 }
 
